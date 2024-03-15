@@ -1,0 +1,40 @@
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+/* Set the margin and padding of the container */
+.container {
+    margin: 20px auto;
+    padding: 20px;
+}
+/* Set the border, background color, and box shadow of the form */
+.form {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+/* Set the padding and text alignment of the form header */
+.form-header {
+    padding: 10px;
+    text-align: center;
+}
+/* Set the font size and color of the form title */
+.form-title {
+    font-size: 24px;
+    color: #333;
+}
+/* Set the padding and border bottom of the form body */
+.form-body {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+/* Set the margin and width of the form group */
+.form-group {
+    margin: 10px 0;
+    width: 80%;
+}
+/* Set the margin and text alignment of the form footer */
+.form-footer {
+    margin: 10px 0;
+    text-align: center;
+}

@@ -1,0 +1,28 @@
+<!-- index.html -->
+<html>
+<head>
+    <title>Variant Database</title>
+</head>
+<body>
+
+
+    <h1>Variant Database 2</h1>
+    <table border="1">
+        <tr>
+            <th>HGVS nomenclature</th>
+            <th>Gene</th>
+            <th>Disease</th>
+            <th>Frequency</th>
+
+        </tr>
+        {% for variant in variants %}
+        <tr>
+            <td>{{ variant.hgvs }}</td>
+            <td>{{ variant.gene }}</td>
+            <td>{{ variant.disease }}</td>
+            <td>{{ variant.frequency }}</td>
+
+        </tr>
+        {% endfor %}
+    </table>
+</body>
