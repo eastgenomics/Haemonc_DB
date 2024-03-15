@@ -52,6 +52,6 @@ class VariantEnCreateView(CreateView):
     model = VariantEn
     form_class = VariantEnForm
     #template_name = 'varianten_form.html'
-    success_url = '/success/' # You can change this to redirect to another page
+    success_url = '/success/' 
    
 
