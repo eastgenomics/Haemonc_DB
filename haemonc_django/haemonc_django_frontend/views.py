@@ -21,14 +21,16 @@ def index(request):
 
 def create_variant(request):
     if request.method == 'POST':
-        form = VariantEnForm(request.POST)
+        form = VariantEnForm(request.POST, request.FILES)
         if form.is_valid(): 
             form.save() 
             messages.success(request, 'Variant created successfully.') 
-            return redirect('haemonc_django_frontend/index.html') 
+            return redirect('haemonc_django_frontend:index') 
     else: 
         form = VariantEnForm()
-    return render(request, 'haemonc_django_frontend/create_variant.html', {'form': form}) 
+    return render(request, 'haemonc_django_frontend/read.html', {'form': form}) 
+
+    #return render(request, 'haemonc_django_frontend/create_variant.html', {'form': form}) 
 
 # Define a view function for the variant input page
 def variant_input(request):
@@ -52,6 +54,6 @@ class VariantEnCreateView(CreateView):
     model = VariantEn
     form_class = VariantEnForm
     #template_name = 'varianten_form.html'
-    success_url = '/success/' 
+    #success_url = '/success/' 
    
 

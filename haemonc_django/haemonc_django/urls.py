@@ -16,14 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from haemonc_django_frontend.views import VariantEnCreateView
-
+from haemonc_django_frontend import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('read/', include("haemonc_django_frontend.urls", namespace="variant_input")),
-    path('createVariant/', VariantEnCreateView.as_view(), name='varianten_create')
-
+    #path('createVariant/', VariantEnCreateView.as_view(), name='create_variant')
+    path('createVariant/', views.VariantEnCreateView.as_view(), name='create_variant')
 
 
 
